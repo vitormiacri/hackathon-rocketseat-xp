@@ -2,8 +2,9 @@ import 'dotenv/config';
 import express from 'express';
 import routes from './routes';
 import path from 'path';
-import './database/index';
-import cors from 'cors'
+import './database';
+import cors from 'cors';
+
 
 class App {
   constructor() {

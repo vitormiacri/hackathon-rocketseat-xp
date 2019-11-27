@@ -6,6 +6,7 @@ import { Container } from './styles'
 
 export default function Button({
   color,
+  border,
   icon,
   children,
   width,
@@ -15,7 +16,7 @@ export default function Button({
   const Icon = MaterialDesign[icon]
 
   return (
-    <Container color={color} width={width} type={type} onClick={onClick}>
+    <Container color={color} border={border} width={width} type={type} onClick={onClick}>
       {icon && <Icon size={20} color="#FFF" />}
       {children && <span>{children}</span>}
     </Container>
@@ -24,17 +25,19 @@ export default function Button({
 
 Button.propTypes = {
   color: PropTypes.string,
+  border: PropTypes.string,
   icon: PropTypes.string,
   children: PropTypes.string.isRequired,
-  width: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   type: PropTypes.string,
   onClick: PropTypes.func,
 }
 
 Button.defaultProps = {
   color: '#3b9eff',
+  border: 'none',
   icon: '',
-  width: 50,
+  width: '100%',
   type: 'button',
   onClick: () => {},
 }
