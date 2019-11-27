@@ -10,6 +10,7 @@ export const Container = styled.button`
   height: 50px;
   border: 0;
   color: #fff;
+  border: ${props => props.border && `1px solid ${props.border}` };
   border-radius: 4px;
   background: ${props => props.color};
 
