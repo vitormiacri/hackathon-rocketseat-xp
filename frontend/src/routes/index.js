@@ -7,6 +7,7 @@ import Home from '~/pages/Home'
 
 import Dashboard from '~/pages/Dashboard'
 import Details from '~/pages/Details'
+import Profile from '~/pages/Profile'
 
 export default function Routes() {
   return (
@@ -15,6 +16,7 @@ export default function Routes() {
 
       <Route path="/dashboard" isPrivate component={Dashboard} />
       <Route path="/details" isPrivate component={Details} />
+      <Route path="/profile" isPrivate component={Profile} />
     </Switch>
   )
 }

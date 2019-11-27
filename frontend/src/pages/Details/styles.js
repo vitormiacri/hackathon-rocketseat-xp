@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-// import { li } from 'polished'
 
 export const Container = styled.section`
   display: flex;
