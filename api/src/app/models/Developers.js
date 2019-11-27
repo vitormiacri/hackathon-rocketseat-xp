@@ -8,6 +8,7 @@ class Developer extends Model {
         biography: Sequelize.STRING,
         career: Sequelize.STRING,
         resume: Sequelize.STRING,
+        urlVideo: Sequelize.STRING,
         },
         {
           sequelize,
