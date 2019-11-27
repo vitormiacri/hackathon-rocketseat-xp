@@ -6,6 +6,7 @@ import * as Yup from 'yup'
 import Form from '~/components/Form'
 import Button from '~/components/Button'
 
+import { Container } from './styles'
 const schema = Yup.object().shape({
   name: Yup.string().required('O nome é obrigatório'),
   email: Yup.string()
@@ -22,7 +23,7 @@ export default function SignUp() {
   }
 
   return (
-    <>
+    <Container>
       <span>Machine School</span>
 
       <Form schema={schema} onSubmit={handleSubmit}>
@@ -37,8 +38,8 @@ export default function SignUp() {
         <Button color="#0597F2" type="submit">
           Criar conta
         </Button>
-        <Link to="/">Já tenho Login</Link>
+        <Link to="/login">Já tenho Login</Link>
       </Form>
-    </>
+    </Container>
   )
 }

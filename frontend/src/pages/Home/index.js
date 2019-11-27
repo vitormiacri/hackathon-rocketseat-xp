@@ -5,9 +5,11 @@ import cogwheels from '~/assets/images/cogwheels.svg'
 import Card from '~/components/Card'
 import { Container, HeaderPage, BodyPage, Footer } from './styles'
 
+import Header from '~/components/Header'
 export default function Home() {
   return (
     <Container>
+      <Header />
       <HeaderPage>
         <div>
           <h2>Conecte-se com o seu futuro</h2>

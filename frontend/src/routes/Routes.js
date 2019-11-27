@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Route, Redirect } from 'react-router-dom'
 
+import useAuth from '~/hooks/auth'
+
 import AuthLayout from '../pages/_layouts/auth'
 import DefaultLayout from '../pages/_layouts/default'
 
@@ -12,7 +14,7 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  // const { signed } = store.getState().auth
+  // const { userInfo } = useAuth()
   const signed = false
 
   if (!signed && isPrivate) {

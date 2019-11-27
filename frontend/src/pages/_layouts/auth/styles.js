@@ -2,21 +2,11 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   height: 100%;
-  background: linear-gradient(-90deg, #f24c3d, #f28305);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: auto;
 `
 
 export const Content = styled.div`
-  width: 100%;
-  max-width: 315px;
-  text-align: center;
-
-  > span {
-    color: #fff;
-    font-size: 24px;
-    line-height: 34px;
-  }
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
 `
