@@ -7,7 +7,7 @@ export const Container = styled.aside`
   height: 100vh;
   background-color: #f25c05;
   position: fixed;
-  z-index: 4;
+  z-index: 10;
   box-shadow: 4px 1px 7px -2px rgba(68, 68, 68, 1);
 
   ${media.lessThan('medium')`
@@ -44,6 +44,42 @@ export const MenuItens = styled.div`
     margin: 0;
     display: flex;
     flex-direction: row;
+
+    &.display {
+      display: none;
+    }
+  `}
+`
+export const MenuDropDown = styled.div`
+  width: 100%;
+  height: ${p => (!p.active ? '0px' : '200px')};
+  top: 60px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0 0 30px 30px;
+  position: absolute;
+  box-shadow: 4px 1px 7px -2px rgba(68, 68, 68, 1);
+  transition: height 0.3s ease-in-out;
+  z-index: 7;
+  overflow: hidden;
+`
+
+export const MenuButton = styled.button`
+  width: 100px;
+  display: none;
+  flex-direction: row;
+  border: none;
+  align-items: center;
+  color: #fff;
+
+  svg {
+    width: 30px;
+  }
+
+  ${media.lessThan('medium')`
+    display: flex;
   `}
 `
 
@@ -59,8 +95,13 @@ export const MenuItem = styled(Link)`
   }
 
   ${media.lessThan('medium')`
-    padding: 0;
-    margin-left: 10px;
+    padding-left: 20px;
     margin-bottom: 0;
+    color: #333;
+    border-bottom: none;
+
+    &:hover {
+    background-color: #eee;
+  }
   `}
 `
