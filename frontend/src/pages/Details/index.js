@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import ResponsiveEmbed from 'react-responsive-embed'
 
 import {
   Container,
@@ -39,7 +40,6 @@ export default function UserItem({ user }) {
         </Header>
         <BtnMentor>Pedir mentoria</BtnMentor>
         <Body>
-          <UserVideo />
           <UserResume>
             <h1>O que é Lorem Ipsum?</h1>
             <p>
@@ -55,6 +55,12 @@ export default function UserItem({ user }) {
               lançou decalques contendo passagens de
             </p>
           </UserResume>
+          <UserVideo>
+            <ResponsiveEmbed
+              src="https://www.youtube.com/embed/2yqz9zgoC-U"
+              allowfullscreen
+            />
+          </UserVideo>
         </Body>
       </Content>
     </Container>
