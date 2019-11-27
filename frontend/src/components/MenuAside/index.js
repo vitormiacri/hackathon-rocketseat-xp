@@ -17,7 +17,7 @@ export default function MenuAside() {
   return (
     <Container>
       <MenuWrapper>
-        <Logo>Time Machine</Logo>
+        <Logo to="/dashboard">Time Machine</Logo>
       </MenuWrapper>
       <MenuItens className="display">
         <MenuItem to="/dashboard">Home</MenuItem>

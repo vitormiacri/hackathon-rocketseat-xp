@@ -32,7 +32,9 @@ export const MenuWrapper = styled.div`
   `}
 `
 
-export const Logo = styled.h2`
+export const Logo = styled(Link)`
+  font-size: 26px;
+  font-weight: bold;
   color: #fff;
 `
 
