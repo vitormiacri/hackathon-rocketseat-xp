@@ -38,12 +38,9 @@ export const Logo = styled.h2`
 export const MenuItens = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  padding-left: 20px;
-
+  margin-top: 30px;
   ${media.lessThan('medium')`
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: row;
   `}
@@ -51,8 +48,17 @@ export const MenuItens = styled.div`
 
 export const MenuItem = styled(Link)`
   color: #fff;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #f24c3d;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #f24c3d;
+  }
+
   ${media.lessThan('medium')`
+    padding: 0;
     margin-left: 10px;
     margin-bottom: 0;
   `}
