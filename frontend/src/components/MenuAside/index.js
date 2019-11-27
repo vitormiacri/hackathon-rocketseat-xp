@@ -23,7 +23,7 @@ export default function MenuAside() {
         <MenuItem to="/dashboard">Home</MenuItem>
         <MenuItem>Carreiras</MenuItem>
         <MenuItem>Programadores</MenuItem>
-        <MenuItem>Meu perfil</MenuItem>
+        <MenuItem to="/profile">Meu perfil</MenuItem>
         <MenuItem>Deixar a plataforma</MenuItem>
       </MenuItens>
       <MenuButton onClick={() => setMenuDropDown(!menuDropDown)}>
@@ -34,7 +34,7 @@ export default function MenuAside() {
         <MenuItem to="/dashboard">Home</MenuItem>
         <MenuItem>Carreiras</MenuItem>
         <MenuItem>Programadores</MenuItem>
-        <MenuItem>Meu perfil</MenuItem>
+        <MenuItem to="/profile">Meu perfil</MenuItem>
         <MenuItem>Deixar a plataforma</MenuItem>
       </MenuDropDown>
     </Container>
