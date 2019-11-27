@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  background: linear-gradient(135deg, #f24c3d, #f28305);
+  background: linear-gradient(10deg, #f24c3d, #f28305);
 `
 export const Content = styled.div`
   height: 100px;

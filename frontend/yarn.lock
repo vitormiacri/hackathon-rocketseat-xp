@@ -9781,29 +9781,6 @@ styled-components@^4.4.1:
     stylis-rule-sheet "^0.0.10"
     supports-color "^5.5.0"
 
-styled-icons@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/styled-icons/-/styled-icons-9.0.1.tgz#ce115150e55c7334157b4abd9ad201dd1b891862"
-  integrity sha512-6/Y8Ktn+2EmoNmKht7uGdVS1MnKJZvNWSQ2rXpIvq/s6jjvLJ4l1WghIPaBXmUE7Q1Wn6FZ2rCyi6Sb3QWQuaA==
-  dependencies:
-    "@styled-icons/boxicons-logos" "^9.0.1"
-    "@styled-icons/boxicons-regular" "^9.0.1"
-    "@styled-icons/boxicons-solid" "^9.0.1"
-    "@styled-icons/crypto" "^9.0.1"
-    "@styled-icons/evil" "^9.0.1"
-    "@styled-icons/fa-brands" "^9.0.1"
-    "@styled-icons/fa-regular" "^9.0.1"
-    "@styled-icons/fa-solid" "^9.0.1"
-    "@styled-icons/feather" "^9.0.1"
-    "@styled-icons/icomoon" "^9.0.1"
-    "@styled-icons/material" "^9.0.1"
-    "@styled-icons/octicons" "^9.0.1"
-    "@styled-icons/remix-fill" "^9.0.1"
-    "@styled-icons/remix-line" "^9.0.1"
-    "@styled-icons/styled-icon" "^9.0.1"
-    "@styled-icons/typicons" "^9.0.1"
-    tslib "^1.9.3"
-
 styled-media-query@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/styled-media-query/-/styled-media-query-2.1.2.tgz#d59e8d91bc4bcff210dc511bdcecedf16eb2c5b7"
