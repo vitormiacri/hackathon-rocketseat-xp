@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize';
-import databaseConfig from '../config/database'
+import databaseConfig from '../config/database';
 import User from '../app/models/User';
 import File from '../app/models/file';
 import mongoose from 'mongoose';
@@ -11,17 +11,21 @@ class Database{
     this.init();
     this.mongo();
   }
-  init(){
+  init() {
     this.connection = new Sequelize(databaseConfig);
 
-    models.map(model => model.init(this.connection))
-          .map(model => model.associate && model.associate(this.connection.models));
-
+    models
+      .map(model => model.init(this.connection))
+      .map(model => model.associate && model.associate(this.connection.models));
   }
   mongo() {
     this.mongoConnection = mongoose.connect(
-       'mongodb://localhost:27017/hackathon',
-       { useNewUrlParser: true, useFindAndModify: true, useUnifiedTopology: true }
+      'mongodb://localhost:27017/hackathon',
+      {
+        useNewUrlParser: true,
+        useFindAndModify: true,
+        useUnifiedTopology: true
+      }
     );
   }
 }
