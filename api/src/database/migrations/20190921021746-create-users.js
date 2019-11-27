@@ -35,6 +35,7 @@ module.exports = {
         type: Sequelize.DATE,
         allwoNull: false,
       },
+      
     });
   },
 

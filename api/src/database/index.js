@@ -3,8 +3,9 @@ import databaseConfig from '../config/database'
 import User from '../app/models/User';
 import File from '../app/models/file';
 import mongoose from 'mongoose';
+import Developer from '../app/models/Developers';
 
-const models = [User, File];
+const models = [User, File, Developer];
 class Database{
   constructor(){
     this.init();
