@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 import history from '~/services/history'
@@ -14,13 +14,19 @@ function AuthProvider({ children }) {
     user: null,
   })
 
-  async function signIn({ username, password }) {
-    const response = await api.post('/login', {
-      username,
-      password,
-    })
+  useEffect(() => {
+    const user = localStorage.getItem('userInfo')
 
-    if (response.status) {
+    user && setUserInfo(JSON.parse(user))
+  }, [])
+
+  async function signIn({ email, password }) {
+    try {
+      const response = await api.post('/sessions', {
+        email,
+        password,
+      })
+
       const { token, user } = response.data
 
       setUserInfo({
@@ -30,19 +36,32 @@ function AuthProvider({ children }) {
         user,
       })
 
+      localStorage.setItem(
+        'userInfo',
+        JSON.stringify({
+          token,
+          signed: true,
+          loading: false,
+          user,
+        })
+      )
+
       api.defaults.headers.Authorization = `Bearer ${token}`
+    } catch (error) {
+      console.log(error)
     }
   }
 
-  async function signUp({ name, email, password }) {
+  async function signUp({ name, email, password, developer }) {
     try {
       await api.post('/users', {
         name,
         email,
         password,
+        developer,
       })
 
-      history.push('/')
+      history.push('/login')
     } catch (error) {
       console.log('erro')
     }

@@ -16,12 +16,11 @@ const schema = Yup.object().shape({
   password: Yup.string().required('A senha é obrigatória'),
 })
 
-export default function SignIn({ history }) {
-  console.log(useAuth())
+export default function SignIn() {
+  const { signIn } = useAuth()
 
   function handleSubmit({ email, password }) {
-    // signIn({ email, password })
-    console.log('login')
+    signIn({ email, password })
   }
 
   return (
