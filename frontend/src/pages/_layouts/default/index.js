@@ -1,15 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Header from '~/components/Header'
+import MenuAside from '~/components/MenuAside'
 
-import { Wrapper } from './styles'
+// import Header from '~/components/Header'
+
+import { Wrapper, Container } from './styles'
 
 export default function DefaultLayout({ children }) {
   return (
     <Wrapper>
-      <Header />
-      {children}
+      <MenuAside />
+      <Container>{children}</Container>
     </Wrapper>
   )
 }

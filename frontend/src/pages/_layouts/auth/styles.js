@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   height: 100%;
-  background: linear-gradient(-90deg, #F24C3D,#F28305);
+  background: linear-gradient(-90deg, #f24c3d, #f28305);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,10 +15,8 @@ export const Content = styled.div`
   text-align: center;
 
   > span {
-     color: #fff;
-     font-size: 24px;
-     line-height: 34px;
+    color: #fff;
+    font-size: 24px;
+    line-height: 34px;
   }
-
-
 `
