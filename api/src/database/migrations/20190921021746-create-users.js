@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      devoloper: {
+      developer: {
         type: Sequelize.BOOLEAN,
         defaultValue: false,
         allowNull: false,
@@ -35,7 +35,7 @@ module.exports = {
         type: Sequelize.DATE,
         allwoNull: false,
       },
-      
+
     });
   },
 

@@ -1,8 +1,9 @@
-import 'dotenv';
+import 'dotenv/config';
 import express from 'express';
 import routes from './routes';
 import path from 'path';
 import './database/index';
+import cors from 'cors'
 
 class App {
   constructor() {
@@ -14,6 +15,7 @@ class App {
 
   middlewares() {
     this.server.use(express.json());
+    this.server.use(cors());
     this.server.use(
       '/files',
       express.static(path.resolve(__dirname, '..', 'temp', 'uploads'))

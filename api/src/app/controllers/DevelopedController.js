@@ -14,6 +14,10 @@ class DeveloperController {
        return res.status(400).json({ erro: 'valid is fails'});
      }
 
+     const developer = await Developer.findOne({
+       where: { user_id: req.userId }
+     });
+
      const { id, biography, career, resume } = await Developer.create({
          biography: req.body.biography,
          career: req.body.career,

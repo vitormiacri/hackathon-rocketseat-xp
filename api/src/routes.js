@@ -4,13 +4,15 @@ import SessionController from './app/controllers/SessionController';
 import authMiddleware from './app/middlewares/auth';
 import FileController from './app/controllers/FileController';
 import DeveloperController from './app/controllers/DevelopedController';
+//import cors from 'cors';
+
 
 import multer from 'multer';
 import multerConfig from './config/multer';
 
+
 const routes = new Router();
 const upload = multer(multerConfig);
-
 
 routes.post('/users', UserController.store);
 
