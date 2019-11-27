@@ -57,7 +57,7 @@ export const MenuDropDown = styled.div`
   height: ${p => (!p.active ? '0px' : '200px')};
   top: 60px;
   right: 0px;
-  display: flex;
+  display: none;
   flex-direction: column;
   background-color: #fff;
   border-radius: 0 0 30px 30px;
@@ -66,6 +66,10 @@ export const MenuDropDown = styled.div`
   transition: height 0.3s ease-in-out;
   z-index: 7;
   overflow: hidden;
+
+  ${media.lessThan('medium')`
+    display: flex;
+  `}
 `
 
 export const MenuButton = styled.button`
