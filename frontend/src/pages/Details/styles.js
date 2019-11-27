@@ -89,25 +89,23 @@ export const Body = styled.div`
 
 export const UserVideo = styled.div`
   width: 50%;
-  height: 300px;
+  height: 250px;
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: -1px 2px 5px -2px rgba(68, 68, 68, 1);
-
   ${media.lessThan('large')`
     width: 100%;
     margin-top: 30px;
+    margin-bottom: 15%;
   `}
 `
 
 export const UserResume = styled.div`
   width: 50%;
-  padding-left: 20px;
+  padding-right: 20px;
   line-height: 26px;
 
   ${media.lessThan('large')`
     width: 100%;
-    margin-top: 30px;
+
   `}
 
   h2 {
