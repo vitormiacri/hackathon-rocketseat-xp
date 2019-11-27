@@ -7,6 +7,7 @@ export const Container = styled.aside`
   height: 100vh;
   background-color: #f25c05;
   position: fixed;
+  z-index: 4;
   box-shadow: 4px 1px 7px -2px rgba(68, 68, 68, 1);
 
   ${media.lessThan('medium')`
